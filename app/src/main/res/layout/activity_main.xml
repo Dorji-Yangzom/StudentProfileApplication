@@ -1,19 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#EEF5FC"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="My Profile"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- ================= TITLE ================= -->
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="My Profile"
+            android:textColor="#173B63"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+
+        <!-- ============== PROFILE PICTURE ============== -->
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/profile"
+            android:clipToOutline="true"
+            android:contentDescription="Student Profile Picture"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/profile" />
+
+
+        <!-- =============== DETAILS CARD =============== -->
+
+        <LinearLayout
+            android:id="@+id/detailsBox"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/details_box"
+            android:elevation="5dp"
+            android:padding="18dp">
+
+
+            <!-- FULL NAME -->
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your full name"
+                android:inputType="textPersonName"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Dorji Yangzom"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- STUDENT ID -->
+
+            <TextView
+                android:id="@+id/tvStudentId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Student ID"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your student ID"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="02240152"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- PROGRAMME -->
+
+            <TextView
+                android:id="@+id/tvProgramme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Programme"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProgramme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your programme"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="BE IT"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- DEPARTMENT -->
+
+            <TextView
+                android:id="@+id/tvDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Department"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your department"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="CTD"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- SEMESTER -->
+
+            <TextView
+                android:id="@+id/tvSemester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Semester"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSemester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your semester"
+                android:inputType="text"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Fifth Semester"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- EMAIL -->
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Email Address"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your email address"
+                android:inputType="textEmailAddress"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="02240152.cst@rub.edu.bt"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <!-- PHONE NUMBER -->
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Phone Number"
+                android:textColor="#173B63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A9BED2"
+                android:hint="Enter your phone number"
+                android:inputType="phone"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="17976716"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <!-- ============== BUTTON SECTION ============== -->
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#3E8E7E"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#8395A7"
+                android:text="Clear"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#4777B3"
+                android:text="Edit"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

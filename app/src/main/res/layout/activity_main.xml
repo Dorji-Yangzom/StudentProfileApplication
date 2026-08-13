@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEF5FC"
+    android:background="#F7F8FA"
     android:fillViewport="true"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:paddingTop="20dp"
         android:paddingBottom="24dp">
 
-        <!-- ================= TITLE ================= -->
+        <!-- TITLE -->
 
         <TextView
             android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="My Profile"
-            android:textColor="#173B63"
-            android:textSize="27sp"
-            android:textStyle="bold" />
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#7A4F63"
+            android:letterSpacing="0.04"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp"/>
 
 
-        <!-- ============== PROFILE PICTURE ============== -->
+        <!-- EDIT PROFILE PICTURE HERE -->
 
         <ImageView
             android:id="@+id/profileImage"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="18dp"
             android:background="@drawable/profile"
             android:clipToOutline="true"
@@ -48,15 +56,18 @@
             app:srcCompat="@drawable/profile" />
 
 
-        <!-- =============== DETAILS CARD =============== -->
+        <!-- IT CONTAINS ALL DETAILS -->
+
+
+        <!-- FOR BUTTONS -->
 
         <LinearLayout
             android:id="@+id/detailsBox"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="@drawable/details_box"
             android:elevation="5dp"
+            android:orientation="vertical"
             android:padding="18dp">
 
 
@@ -76,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your full name"
                 android:inputType="textPersonName"
                 android:paddingTop="4dp"
@@ -103,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your student ID"
                 android:inputType="text"
                 android:paddingTop="4dp"
@@ -130,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your programme"
                 android:inputType="text"
                 android:paddingTop="4dp"
@@ -157,7 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your department"
                 android:inputType="text"
                 android:paddingTop="4dp"
@@ -184,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your semester"
                 android:inputType="text"
                 android:paddingTop="4dp"
@@ -211,7 +222,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your email address"
                 android:inputType="textEmailAddress"
                 android:paddingTop="4dp"
@@ -237,7 +248,7 @@
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#A9BED2"
+                android:background="@null"
                 android:hint="Enter your phone number"
                 android:inputType="phone"
                 android:paddingTop="4dp"
@@ -248,22 +259,19 @@
 
         </LinearLayout>
 
-
-        <!-- ============== BUTTON SECTION ============== -->
-
         <LinearLayout
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="1"
                 android:backgroundTint="#3E8E7E"
                 android:text="Save"
                 android:textColor="#FFFFFF"
@@ -273,9 +281,9 @@
                 android:id="@+id/btnClear"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="1"
                 android:backgroundTint="#8395A7"
                 android:text="Clear"
                 android:textColor="#FFFFFF"
@@ -285,8 +293,8 @@
                 android:id="@+id/btnEdit"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
                 android:layout_marginStart="5dp"
+                android:layout_weight="1"
                 android:backgroundTint="#4777B3"
                 android:text="Edit"
                 android:textColor="#FFFFFF"
